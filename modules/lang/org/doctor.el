@@ -28,3 +28,7 @@
   (when IS-WINDOWS
     (unless (executable-find "convert")
       (warn! "Couldn't find the convert program (from ImageMagick). org-download-clipboard will not work."))))
+
+(when (featurep! +fc)
+  (unless (executable-find "gawk")
+    (warn! "Couldn't find the gawk executable. org-fc will not work.")))

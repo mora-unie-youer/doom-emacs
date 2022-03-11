@@ -56,6 +56,11 @@
   (package! org-brain :pin "46ca9f766322cff31279ecdf02251ff24a0e9431"))
 (when (featurep! +dragndrop)
   (package! org-download :pin "947ca223643d28e189480e607df68449c15786cb"))
+(when (featurep! +fc)
+  (package! org-fc
+    :recipe (:host github :repo "l3kn/org-fc"
+             :files (:defaults "awk" "demo.org"))
+    :pin "f64b5336485a42be91cfe77850c02a41575f5984"))
 (when (featurep! +gnuplot)
   (package! gnuplot :pin "7138b139d2dca9683f1a81325c643b2744aa1ea3")
   (package! gnuplot-mode :pin "601f6392986f0cba332c87678d31ae0d0a496ce7"))
